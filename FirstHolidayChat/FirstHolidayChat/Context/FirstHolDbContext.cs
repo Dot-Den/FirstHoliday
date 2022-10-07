@@ -31,7 +31,11 @@ namespace FirstHolidayChat.Context
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Name=ConnectionStrings:EFConnection");
+                IConfigurationRoot configuration = new ConfigurationBuilder()
+                .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
+                .AddJsonFile("appsettings.json")
+                .Build();
+                optionsBuilder.UseSqlServer(configuration.GetConnectionString("EFConnection"));
             }
         }
 
@@ -214,5 +218,7 @@ namespace FirstHolidayChat.Context
         }
 
         partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+
+        public DbSet<FirstHolidayChat.Models.HolidayViewModel> HolidayViewModel { get; set; }
     }
 }
