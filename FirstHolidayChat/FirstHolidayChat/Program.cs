@@ -1,7 +1,15 @@
+using FirstHolidayChat.Services;
+using FirstHolidayChat.Context;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddDbContext<FirstHolDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("EFConnection")));
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddScoped<IHolidayServices, HolidayServices>();
 
 var app = builder.Build();
 
