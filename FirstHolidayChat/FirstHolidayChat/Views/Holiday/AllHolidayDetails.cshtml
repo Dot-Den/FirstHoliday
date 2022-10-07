@@ -1,0 +1,84 @@
+﻿@model IEnumerable<FirstHolidayChat.Models.HolidayViewModel>
+
+@{
+    ViewData["Title"] = "AllHolidayDetails";
+}
+
+<h1>AllHolidayDetails</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.HolCity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NightLifeType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TemperatureRating)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HolContinent)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HolCountry)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HolType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HolHotel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StarRating)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PricePerNight)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TerrainType)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.HolCity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NightLifeType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TemperatureRating)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HolContinent)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HolCountry)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HolType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HolHotel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StarRating)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PricePerNight)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TerrainType)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
