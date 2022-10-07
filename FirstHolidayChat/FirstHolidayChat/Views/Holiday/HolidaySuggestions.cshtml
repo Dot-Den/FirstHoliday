@@ -1,0 +1,37 @@
+﻿@model IEnumerable<FirstHolidayChat.Models.HolidayViewModel>
+
+@{
+    ViewData["Title"] = "Holiday Suggestions";
+}
+
+<link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" href="~/css/HolidaySuggestions.css" />
+
+<h1>Suggested Holiday Packages</h1>
+<br>
+<br>
+@if (Model == null){
+    <p> ehfejsfnsjienfiseuf</p>
+}else{
+@foreach (var item in Model)
+{
+
+    <div class="grid-container">
+        @{
+            string itemImg = "/img/" + item.HolCountry + ".png";
+        }
+        <img class="holImgs" src="@itemImg">
+        <div class="descBorder holDescs">
+            <strong>@item.HolCountry</strong>
+            <p>Enjoy a holiday at @item.HolHotel in the heart of @item.HolCity with a @item.StarRating Star Rating!</p>
+            <p>@item.HolCity is a @item.TerrainType type area with @item.TemperatureRating temperatures and a @item.NightLifeType night life.</p>
+            <p>Prices from the hotel vary starting at @item.PricePerNight per night, book fast because there isn't many spots left!</p>
+            <br><br><br><br><br><br>
+            <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Buy Now Here!</a>
+        </div>
+    </div>
+}
+
+<script> 
+</script>
+};

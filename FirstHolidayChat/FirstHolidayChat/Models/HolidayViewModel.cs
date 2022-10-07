@@ -1,7 +1,12 @@
-﻿namespace FirstHolidayChat.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace FirstHolidayChat.Models
 {
     public class HolidayViewModel
     {
+        /* Holiday */
+        [Key]
+        public int HolidayRef { get; set; }
         /* City */
         public string? HolCity { get; set; }
         /* CityNightLife */
@@ -14,8 +19,6 @@
         public string? HolCountry { get; set; }
         /* HolCategory */
         public string? HolType { get; set; }
-        /* Holiday */
-        public int HolidayRef { get; set; }
 
         /* Hotel */
         public string? HolHotel { get; set; }

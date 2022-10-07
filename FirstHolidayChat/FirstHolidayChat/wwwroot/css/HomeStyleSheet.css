@@ -1,0 +1,269 @@
+﻿body {
+    background-color: #f6f3f3;
+}
+
+
+/*-- Chat Bot --*/
+
+.chatbot-icon {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    font-size: 60px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.chatbot-box {
+    position: fixed;
+    right: 85px;
+    bottom: 80px;
+    background: #FFFFFF;
+    /*    inside #FCEFF9*/
+    border-radius: 6px;
+    z-index: 1000;
+    height: 0;
+    width: 0;
+    transition: all 0.3s ease-out;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.msg-container {
+    width: 100%;
+    display: flex;
+}
+
+.msg-container.right {
+    justify-content: flex-end;
+    margin: 0px 0px 0px 0px;
+}
+
+.msg-container.left {
+    justify-content: flex-start;
+}
+
+.msg-container.right > .msg {
+    background-color: lightsteelblue;
+    margin: 15px 15px 0px 0px;
+    transition: all 0.3s ease-out;
+
+}
+.btn{
+    text-align: center !important;
+}
+.msg-container.left > .msg {
+    margin: 15px 0px 0px 15px;
+    display: inherit;
+}
+
+.loadTextImage {
+    max-width: 35%;
+    margin-left: 260px;
+}
+
+.chatbot-header {
+    background-color: darkslateblue;
+    height: 0px;
+    width: 0px;
+    border-radius: 20px 20px 0px 0px;
+    margin-bottom: 2px;
+    position: fixed;
+    right: 85px;
+    bottom: 80px;
+    z-index: 1010;
+    transition: all 0.3s ease-out;
+    margin-bottom:75px;
+}
+
+.hidden{
+display: none !important;
+
+}
+
+.msg {
+    max-width: 70%;
+    border-radius: 10px;
+    padding: 3px 3px 3px 3px;
+}
+
+.responseBtn {
+    animation: fadeIn 2s;
+    -webkit-animation: fadeIn 2s;
+    -moz-animation: fadeIn 2s;
+    -o-animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-moz-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-o-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/*-- NAVIGATION --*/
+.navbar-brand img {
+    height: 3rem;
+}
+
+.navbar {
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    z-index: 1;
+    background-color: #FFFFFF !important;
+}
+
+.nav-item {
+    padding: .5rem;
+}
+
+.nav-link {
+    color: gray !important;
+}
+
+.new-link.active,
+.nav-link:hover {
+    color: red !important;
+}
+
+#findingHoliday{
+    text-align: center;
+    font-size: larger;
+    font-weight:700;
+    padding-top:20px;
+}
+
+#loadingHoliday {
+    max-width: 35%;
+    margin-left: 30%;
+}
+/*-- CAROUSEL --*/
+/* -- Stopping the carousel image from overflowing and filling the page when increasing size -- */
+.carousel-inner {
+    max-height: 39rem !important;
+}
+
+/*---Change Carousel Transition Speed --*/
+
+.carousel-item-next,
+.carousel-item-prev,
+.carousel-item.active {
+    transition: transform 1.2s ease;
+}
+
+/*-- Carousel Content --*/
+
+.carousel-caption {
+    position: absolute;
+    top: 54%;
+    transform: translateY(-20%);
+}
+
+.bg-custom {
+    background-color: rgba(0, 0, 0, .4);
+    color: white;
+    border-radius: 1rem;
+}
+
+.carousel-caption h1 {
+    font-size: 3.8rem;
+    text-shadow: .1rem .1rem .3rem rgb(190, 92, 194);
+}
+
+.carousel-caption h3 {
+    font-size: 2.2rem;
+    text-shadow: .1rem .1rem .2rem rgb(190, 92, 194);
+}
+
+
+.btn-success:hover, .btn-success:focus {
+    background-color: darkCyan !important;
+    border: .5rem solid darkCyan !important;
+    box-shadow: 0 0 0 0.2rem darkcyan !important;
+}
+
+
+/*-- Carousel Prev and Next --*/
+
+.carousel-control-prev,
+.carousel-control-next {
+    color: cyan;
+    opacity: unset;
+    opacity: 0.4
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: darkcyan;
+    color: cyan;
+    opacity: 0.4;
+}
+
+.carousel-control-prev:focus,
+.carousel-control-next:focus {
+    color: cyan;
+    opacity: 0.4;
+}
+
+.carousel-control-prev:active,
+.carousel-control-next:active {
+    background-color: darkcyan;
+    opacity: 0.4;
+}
+
+/*-- Three column image --*/
+
+.three-col-img{
+    max-height: 13rem;
+}
+
+footer {
+    background: #e55d87;
+    background: -moz-linear-gradient(-45deg, #e55d87 0%, #5fc3e4 100%);
+    background: -webkit-linear-gradient(-45deg, #e55d87 0%, #5fc3e4 100%);
+    background: linear-gradient(135deg, #e55d87 0%, #5fc3e4 100%);
+    box-sizing: border-box;
+}
+
+    footer p {
+        color: #FFFFFF;
+        margin: 20px 0 0 0;
+    }
+
+.socialIcons {
+    font-size: 34px;
+    color: rgba(255, 255, 255, 0.7);
+}
